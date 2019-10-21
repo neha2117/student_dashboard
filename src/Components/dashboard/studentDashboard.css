@@ -1,0 +1,67 @@
+.student-dashboard-main-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.student-dashboard-loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-dashboard-container-wrapper {
+    background: #E6E6FA;
+    width: 100%;
+}
+
+.student-dashboard-nav {
+    background: black;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    top: 0px;
+    z-index: 3333333;
+    overflow: hidden;
+    width: 100%;
+    color: white;
+}
+
+.student-dashboard-data {
+    background: #F8f8f8;
+    margin: auto;
+    margin-top: 60px;
+    height: auto;
+    padding: 65px;
+}
+
+.dashboard-margin {
+    margin-bottom: 60px;
+}
+
+.student-dashboard-card {
+    margin: auto;
+    width: 170px;
+    height: 210px;
+    background: white;
+    padding: 12px;
+    box-shadow: #c2c2c2 0px 3px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform .2s
+}
+
+.student-dashboard-card:hover {
+    margin: auto;
+    width: 170px;
+    height: 210px;
+    background: white;
+    padding: 12px;
+    box-shadow: #c2c2c2 0px 3px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: scale(1.2);
+    border: 1px solid #bdbcbd
+}
