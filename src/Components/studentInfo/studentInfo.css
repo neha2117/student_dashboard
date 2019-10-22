@@ -1,0 +1,177 @@
+.student-info-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* height: 100%; */
+    margin: auto;
+    text-align: center;
+    /* background: gainsboro; */
+}
+
+.student-info-header {
+    background-image: url("../../images/pricing-header-bg.svg");
+    width: 100%;
+    height: 230px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    /* margin-top: 100px; */
+    background-size: cover;
+    /* padding-bottom: 44%; */
+    color: white;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-family: fantasy;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+}
+
+.student-info-container-wrapper {
+    margin: auto;
+    border: 1px solid red;
+    position: relative;
+    /* padding: 72px; */
+    /* height: 80vh;
+    width: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.student-info-hat-icon img {
+    width: 200px;
+}
+
+.student-info-name {
+    font-size: 55px;
+    font-family: cursive;
+}
+
+.student-info-details {
+    font-size: 3rem;
+    font-family: fantasy;
+}
+
+.student-info-wrapper {
+    height: 100%;
+}
+
+.student-info-detail-container {
+    height: calc(100%);
+}
+
+.student-info-container {
+    /* height: 100%; */
+    margin: auto;
+    text-align: center;
+    /* background: gainsboro; */
+    display: flex;
+}
+
+.left{
+    border-right: 5px solid #6e59eb;
+    text-align: right;
+    padding-right: 35px;
+}
+
+.right{
+    padding-left: 35px;
+}
+
+.no-student {
+    width: 100%;
+    color: black;
+    margin-top: 230px;
+    text-align: center;
+    font-size: 18px;
+    font-family: fantasy;
+}
+
+.student-info-container-wrapper {
+    background: white;
+    height: 242px;
+    margin: auto;
+    box-shadow: #c2c2c2 0px 3px 16px;
+    border-radius: 8px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .student-info-container-wrapper {
+        margin: auto; 
+        border: 1px solid red;
+        position: relative;
+        /* padding: 72px; */
+    }
+
+    .student-info-hat-icon img {
+        width: 100px;
+    }
+    
+    .student-info-name {
+        font-size: 30px;
+        font-family: cursive;
+        text-align: center;
+    }
+    
+    .student-info-details {
+        font-size: 20px;
+        font-family: fantasy;
+    }
+    
+    .student-info-wrapper {
+        height: 100%;
+    }
+
+    .student-info-header {
+        background-image: url("../../images/pricing-header-bg.svg");
+        width: 100%;
+    height: 230px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    /* margin-top: 100px; */
+    background-size: cover;
+    /* padding-bottom: 44%; */
+    color: white;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-family: fantasy;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+}
+
+    .student-info-detail-container {
+        height: calc(100%);
+    }
+
+    .left{
+        border-right: 0px solid #6e59eb;
+        text-align: center;
+        padding-right: 0px;
+        margin: auto;
+    }
+    
+    .right{
+        padding-left: 0px;
+        margin: auto;
+    }
+    .student-info-container {
+        /* height: 100%; */
+        margin: auto;
+        text-align: center;
+        /* background: gainsboro; */
+        display: inline-block;
+    }
+}

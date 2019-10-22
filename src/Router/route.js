@@ -6,7 +6,7 @@ import StudentData from "../Components/studentInfo/studentInfo";
 
 const Routes = (
   <Router>
-    <Route path={"/auth"} component={Auth} exact />
+    <Route path={"/"} component={Auth} exact />
     <Route path={"/dashboard"} component={Dashboard} exact />
     <Route path={"/dashboard/:id"} component={StudentData} exact />
   </Router>

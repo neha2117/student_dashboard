@@ -6,9 +6,7 @@ export default function reducer(state={
         case "STUDENT_DATA":
             return {...state, studentData: action.payload }
         case "PARTICULAR_STUDENT_INFO":
-            var data = state.studentData
-            console.log("data", data, action.payload)
-            return {...state, particularStudentInfo: state.studentData[action.payload]}
+            return {...state, particularStudentInfo: state.studentData.data[action.payload]}
         default : {}
     }
 
