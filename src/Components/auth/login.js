@@ -23,6 +23,13 @@ class Login extends React.Component {
             }, () => {
                 console.log("user", this.state.userData)
             })
+        }else {
+            this.setState({
+                userData: {
+                    email: "",
+                    password: ""
+                }
+            })
         }
     }
 
@@ -43,9 +50,9 @@ class Login extends React.Component {
                 <div className="row student-auth-container">
                     <div className="col-sm-8 col-md-6 col-lg-6 student-auth-container-wrapper">
                     <label>Email</label>
-                <input type="email" placeholder="Enter your email" id="email" onChange={this.getUserInfo}/>
+                <input type="email" placeholder="Enter your email" id="email" onChange={this.getUserInfo} autoComplete="off"/>
                 <label>Password</label>
-                <input type="password" id="password" onChange={this.getUserInfo}/>
+                <input type="password" id="password" onChange={this.getUserInfo} autoComplete="off"/>
                 <button onClick={this.goToDashboard} className="login-btn">Login</button>
                     </div>
                 </div>
