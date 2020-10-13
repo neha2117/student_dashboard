@@ -1,3 +1,6 @@
+About: This is an app to show basic login functionality.
+It is a responsive app for showing student profile along with some other functionality.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
