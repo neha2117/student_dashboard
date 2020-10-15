@@ -5,9 +5,9 @@ import { connect } from "react-redux";
 import Loader from "../../images/Loader.svg";
 import Student from "../../images/student.png";
 import NotFound from "../../images/oops.jpg";
-const mapStateToProps = store => {
+const mapStateToProps = (store) => {
   return {
-    studentData: store.student.studentData
+    studentData: store.student.studentData,
   };
 };
 
@@ -19,7 +19,7 @@ class Dashboard extends React.Component {
       studentData: {},
       loader: true,
       sort: true,
-      sort2: true
+      sort2: true,
     };
   }
 
@@ -32,12 +32,11 @@ class Dashboard extends React.Component {
       this.setState(
         {
           loader: false,
-          studentData: nextProps.studentData.data
+          studentData: nextProps.studentData.data,
         },
         () => {
-          console.log(this.state.studentData[110].name);
           window.history.pushState(null, document.title, window.location.href);
-          window.addEventListener("popstate", function(event) {
+          window.addEventListener("popstate", function (event) {
             window.history.pushState(
               null,
               document.title,
@@ -50,27 +49,26 @@ class Dashboard extends React.Component {
   }
 
   getTheStudentData(values) {
-    console.log("value", values);
     var studentInfo = Object.assign({}, values);
     var rollNo = studentInfo[rollNo];
     this.props.history.push({
       pathname: `/dashboard/${studentInfo.rollNo}`,
       state: {
-        studentInfo: studentInfo
-      }
+        studentInfo: studentInfo,
+      },
     });
   }
 
-  searchStudent = e => {
+  searchStudent = (e) => {
     var input = e.target.value.toUpperCase();
     this.setState(
       {
-        studentData: this.props.studentData.data
+        studentData: this.props.studentData.data,
       },
       () => {
         var res = Object.keys(this.state.studentData)
           .filter(
-            items =>
+            (items) =>
               this.state.studentData[items].name.toUpperCase().indexOf(input) >
               -1
           )
@@ -79,15 +77,12 @@ class Dashboard extends React.Component {
               Object.assign(res, { [key]: this.state.studentData[key] }),
             {}
           );
-        // console.log(this.state.studentData[items])
-
-        console.log(res);
         this.setState({
-          studentData: res
+          studentData: res,
         });
         if (input === "") {
           this.setState({
-            studentData: this.props.studentData.data
+            studentData: this.props.studentData.data,
           });
         }
       }
@@ -100,7 +95,7 @@ class Dashboard extends React.Component {
       Object.keys(this.state.studentData).length !== 0
     ) {
       var list = Object.assign({}, this.state.studentData);
-      var res = Object.values(list).sort(function(a, b) {
+      var res = Object.values(list).sort(function (a, b) {
         if (a.name < b.name) {
           return -1;
         }
@@ -109,10 +104,10 @@ class Dashboard extends React.Component {
         }
         return 0;
       });
-      console.log(res);
+
       this.setState({
         studentData: res,
-        sort: false
+        sort: false,
       });
     }
   };
@@ -123,7 +118,7 @@ class Dashboard extends React.Component {
       Object.keys(this.state.studentData).length !== 0
     ) {
       var list = Object.assign({}, this.state.studentData);
-      var res = Object.values(list).sort(function(a, b) {
+      var res = Object.values(list).sort(function (a, b) {
         if (a.name > b.name) {
           return -1;
         }
@@ -132,10 +127,10 @@ class Dashboard extends React.Component {
         }
         return 0;
       });
-      console.log(res);
+
       this.setState({
         studentData: res,
-        sort: true
+        sort: true,
       });
     }
   };
@@ -146,7 +141,7 @@ class Dashboard extends React.Component {
       Object.keys(this.state.studentData).length !== 0
     ) {
       var list = Object.assign({}, this.state.studentData);
-      var res = Object.values(list).sort(function(a, b) {
+      var res = Object.values(list).sort(function (a, b) {
         if (
           a.marks.s1 + a.marks.s2 + a.marks.s3 <
           b.marks.s1 + b.marks.s2 + b.marks.s3
@@ -161,10 +156,10 @@ class Dashboard extends React.Component {
         }
         return 0;
       });
-      console.log(res);
+
       this.setState({
         studentData: res,
-        sort2: false
+        sort2: false,
       });
     }
   };
@@ -175,7 +170,7 @@ class Dashboard extends React.Component {
       Object.keys(this.state.studentData).length !== 0
     ) {
       var list = Object.assign({}, this.state.studentData);
-      var res = Object.values(list).sort(function(a, b) {
+      var res = Object.values(list).sort(function (a, b) {
         if (
           a.marks.s1 + a.marks.s2 + a.marks.s3 >
           b.marks.s1 + b.marks.s2 + b.marks.s3
@@ -190,10 +185,10 @@ class Dashboard extends React.Component {
         }
         return 0;
       });
-      console.log(res);
+
       this.setState({
         studentData: res,
-        sort2: true
+        sort2: true,
       });
     }
   };
@@ -203,7 +198,7 @@ class Dashboard extends React.Component {
       <div className="student-dashboard-main-container">
         {this.state.loader ? (
           <div className="student-dashboard-loader">
-            <img src={Loader} alt="" />
+            <img src={Loader} alt="Loader" />
           </div>
         ) : (
           <div className="student-dashboard-container-wrapper">
